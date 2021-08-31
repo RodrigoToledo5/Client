@@ -59,13 +59,8 @@ function PaymentsConfig() {
       
       const send = await axios({
         method: 'POST',
-        url: `https://api.mercadopago.com/oauth/token`,
-        data: {
-          client_secret: "dbXXNFs2LCkaTxK9zLP6cZZVlf61q29h",
-          grant_type: "authorization_code",
-          code:token,
-          redirect_uri:"https://consultancespace.vercel.app/"
-        }
+        url: `${API}/profesionaltoken`,
+        data: {code:token}
       })
       console.log(send)
       console.log("paso")
