@@ -11,6 +11,7 @@ import PatientsRouter from './components/Log/privateroutes/Patientsrouter';
 import ProfesionalRouter from './components/Log/privateroutes/Profesionalrouter ';
 import GoogleSign from './components/Sign/googlesign';
 import Succes from './components/payments/succes';
+import PaymentsConfig from './components/payments/PaymentsConfig';
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/succes" component={Succes}/> 
       <Route path="/failure" component={Succes}/> 
       <Route path="/pending" component={Succes}/> 
+      <Route path="/payments" component={PaymentsConfig}/> 
       <Route exact path="/" component={Main}/>
       <Route path="/" component={Footer}/>
     </>
