@@ -55,6 +55,8 @@ function PaymentsConfig() {
   async function captureToken() {
     if (window.location.pathname === "/payments") {
       const token = window.location.href.substring(window.location.href.indexOf("code="), window.location.href.indexOf("&state=client"));
+      console.log(token)
+      
       const send = await axios({
         method: 'POST',
         url: `https://api.mercadopago.com/oauth/token`,
