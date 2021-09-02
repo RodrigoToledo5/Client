@@ -57,6 +57,7 @@ function PaymentsConfig() {
     if (window.location.pathname === "/payments") {
       const token = window.location.href.substring(window.location.href.indexOf("code="), window.location.href.indexOf("&state=client"));
       console.log(token)
+      window.location.replace(`http://localhost:3000/payments?${window.location.href.substring(window.location.href.indexOf("code="))}`)
       
       const send = await axios({
         method: 'POST',
